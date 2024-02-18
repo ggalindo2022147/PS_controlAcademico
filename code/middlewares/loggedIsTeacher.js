@@ -2,10 +2,8 @@ const loggedisTeacher = async (req, res, next) => {
   try {
     const { user } = req;
 
-    if (user.role !== 'TEACHER') {
-      return res
-        .status(401)
-        .json({ message: 'No eres un profesor' });
+    if (user.role !== "TEACHER") {
+      return res.status(401).json({ message: "No eres un profesor" });
     }
 
     next();
@@ -14,4 +12,4 @@ const loggedisTeacher = async (req, res, next) => {
   }
 };
 
-module.exports = loggedisTeacher;
+module.exports = { loggedisTeacher };
