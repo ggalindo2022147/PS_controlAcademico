@@ -1,6 +1,3 @@
-import Course from "../models/materias.model.js";
-import User from "../models/usuario.model.js";
-
 const User = require("../models/user.js");
 const Course = require("../models/course.js");
 
@@ -60,4 +57,7 @@ const allCourses = async (req, res) => {
   }
 };
 
-module.exports = { crear, allCourses };
+module.exports = {
+  crear,
+  allCourses,
+};
