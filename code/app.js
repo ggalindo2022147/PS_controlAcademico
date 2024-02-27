@@ -15,7 +15,13 @@ const createUserByDefault = async () => {
       role: "TEACHER",
     });
 
-    await user.save();
+    let users = await User.find({});
+
+    if (users.length > 0) {
+      return;
+    }
+
+    return await user.save();
   } catch (error) {
     console.log(error);
   }

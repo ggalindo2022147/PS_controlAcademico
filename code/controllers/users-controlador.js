@@ -81,4 +81,4 @@ const eliminar = async (req, res) => {
   }
 };
 
-module.exports = { perfil, actualizar, login, eliminar };
+module.exports = { perfil, actualizar, login, eliminar, };
